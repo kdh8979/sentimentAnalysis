@@ -2,6 +2,8 @@
 from konlpy.tag import Twitter
 import timeit
 twitter = Twitter()
+
+# 하하하
 def tokenize_by_twitter(doc):
     # norm은 정규화, stem은 근어로 표시하기를 나타냄
     return ['/'.join(t) for t in twitter.pos(doc, norm=True, stem=True)]
@@ -27,7 +29,6 @@ def tokenize_by_mecab2(doc):
             continue
         result.append(t[0]+"/"+t[1])
     return result
-
 
 if __name__ == "__main__":
     start = timeit.default_timer()
